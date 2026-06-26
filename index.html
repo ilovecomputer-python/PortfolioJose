@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - MJAA</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="page-header">
+            <div class="brand">MJAA</div>
+            <div class="header-actions">
+                <nav class="main-nav" aria-label="Navigasi halaman">
+                    <a href="#hero">Beranda</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Kontak</a>
+                </nav>
+                <button class="theme-toggle" type="button" id="themeToggle">Dark Mode</button>
+            </div>
+        </header>
+
+        <main class="card-container">
+            <section id="hero" class="hero-section">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow">Tentang Saya</p>
+                    <h2>Maximillian Jose Andreas Aditjandra</h2>
+                    
+                    
+                </div>
+                <aside class="photo-section">
+                    <img src="profil.jpeg" alt="Foto Profil Jose">
+                </aside>
+            </section>
+
+            <section class="info-section">
+                <article class="section-card">
+                    <h2>SINGKAT CERITA</h2>
+                    <p class="deskripsi">Orang biasa dengan mimpi luar biasa, sedang bertumbuh di STEI-K ‘25 sebagai staf dokumentasi dan sponsorship, bercita-cita membanggakan orang tua, dan suka coding serta vibing dari Semarang.</p>
+                </article>
+
+                <article class="section-card">
+                    <h2>PENGALAMAN</h2>
+                    <ul class="list-pengalaman">
+                        <li>Staff Dokumentasi BPA STEI-K 2025</li>
+                        <li>Staff Sponsorship Aku Masuk ITB 2026</li>
+                        <li>Staff Sponsorship IMPACT 6.O STEI-K ITB </li>
+                    </ul>
+                </article>
+
+                <section id="skills" class="section-card" aria-labelledby="skills-title">
+                    <h2 id="skills-title">Teknologi yang Ingin Dipelajari</h2>
+                    <ul class="skills-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript Modern</li>
+                        <li>React / Next.js</li>
+                        <li>TypeScript</li>
+                        <li>Node.js</li>
+                    </ul>
+                </section>
+
+                <section class="section-card data-grid" aria-labelledby="data-pribadi">
+                    <h2 id="data-pribadi" class="sr-only">Data Pribadi</h2>
+                    <dl>
+                        
+                        <dt>Motto</dt>
+                        <dd class="text-green">Terbentur, terbentur, terbentuk</dd>
+                        <dt>Asal Daerah</dt>
+                        <dd class="text-white">Semarang, Jawa Tengah</dd>
+                        <dt>Cita-Cita</dt>
+                        <dd class="text-white">Membanggakan orang tua</dd>
+                    </dl>
+                </section>
+            </section>
+        </main>
+
+        <footer id="contact" class="page-footer">
+            <p class="footer-title">Kontak</p>
+            <div class="footer-links">
+                <a href="#" aria-label="Instagram placeholder">Instagram: jose_aditjandra</a>
+                <a href="#" aria-label="LinkedIn placeholder">LinkedIn: Maximillian Jose Andreas Aditjandra</a>
+                <a href="#" aria-label="WhatsApp placeholder">WhatsApp: 081807819999</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.body;
+
+        function updateThemeText() {
+            themeToggle.textContent = root.classList.contains('light') ? 'Light Mode' : 'Dark Mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            root.classList.toggle('light');
+            root.classList.toggle('dark');
+            updateThemeText();
+        });
+
+        if (!root.classList.contains('light') && !root.classList.contains('dark')) {
+            root.classList.add('dark');
+        }
+        updateThemeText();
+    </script>
+</body>
+</html>
